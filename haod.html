@@ -1,0 +1,93 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tower of Hanoi</title>
+<style>
+/* Styles for disks */
+.disk {
+  width: 100px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  /* Add transition for smooth movement */
+  transition: transform 0.5s ease;
+}
+
+/* Styles for pillars */
+.pillar {
+  width: 20px;
+  height: 200px;
+  background-color: brown;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Adjustments for positioning disks and pillars */
+.disk1 { transform: translateX(-50%); }
+.disk2 { transform: translateX(-50%); }
+.disk3 { transform: translateX(-50%); }
+.disk4 { transform: translateX(-50%); }
+.disk5 { transform: translateX(-50%); }
+
+.pillar1 { left: 20%; }
+.pillar2 { left: 50%; }
+.pillar3 { left: 80%; }
+
+/* Modify the keyframes for disk movement */
+@keyframes moveDisk {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-100px);
+  }
+  70% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(-400px);
+  }
+}
+</style>
+</head>
+<body>
+<!-- Pillars -->
+<div class="pillar pillar1"></div>
+<div class="pillar pillar2"></div>
+<div class="pillar pillar3"></div>
+
+<!-- Disks -->
+<div class="disk disk1" style="left: 20%"></div>
+<div class="disk disk2" style="left: 20%"></div>
+<div class="disk disk3" style="left: 20%"></div>
+
+<!-- Controls -->
+<select id="diskSelect">
+  <option value="3">3 Disks</option>
+  <option value="4">4 Disks</option>
+  <option value="5">5 Disks</option>
+</select>
+<button id="startBtn">Start</button>
+<button id="pauseBtn">Pause</button>
+<button id="resumeBtn">Resume</button>
+<select id="speedSelect">
+  <option value="1000">Slow</option>
+  <option value="500">Medium</option>
+  <option value="250">Fast</option>
+</select>
+
+<script>
+const diskSelect = document.getElementById('diskSelect');
+const startBtn = document.getElementById('startBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const resumeBtn = document.getElementById('resumeBtn');
+const speedSelect = document.getElementById('speedSelect');
+let moveInterval;
+
+startBtn.addEventListener('click', startGame);
+pauseBtn.addEventListener('click',
+[Something went wrong, please try again later.]
