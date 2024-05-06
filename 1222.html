@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tower of Hanoi</title>
+<style>
+.disk {
+  width: 100px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  /* Adjust the position to center the disks */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Add transition for smooth movement */
+  transition: transform 0.5s ease;
+}
+
+.pillar {
+  width: 20px;
+  height: 200px;
+  background-color: brown;
+  position: absolute;
+  bottom: 0;
+  /* Adjust the position to center the pillars */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Modify the keyframes for disk movement */
+@keyframes moveDisk {
+  0% {
+    /* Initial position */
+    transform: translateY(0);
+  }
+  30% {
+    /* Midpoint for lifting off */
+    transform: translateY(-100px);
+  }
+  70% {
+    /* Midpoint for moving to destination */
+    transform: translateY(-200px);
+  }
+  100% {
+    /* Final position */
+    transform: translateY(-400px);
+  }
+}
+</style>
+</head>
+<body>
+<div class="pillar" style="left: 20%"></div>
+<div class="pillar" style="left: 50%"></div>
+<div class="pillar" style="left: 80%"></div>
+<select id="diskSelect">
+  <option value="3">3 Disks</option>
+  <option value="4">4 Disks</option>
+  <option value="5">5 Disks</option>
+</select>
+<button id="startBtn">Start</button>
+<button id="pauseBtn">Pause</button>
+<button id="resumeBtn">Resume</button>
+<select id="speedSelect">
+  <option value="1">Slow</option>
+  <option value="0.5">Medium</option>
+  <option value="0.25">Fast</option>
+</select>
+<script>
+const diskSelect = document.getElementById('diskSelect');
+const startBtn = document.getElementById('startBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const resumeBtn = document.getElementById('resumeBtn');
+const speedSelect = document.getElementById('speedSelect');
+
+startBtn.addEventListener('click', startGame);
+pauseBtn.addEventListener('click', pauseGame);
+resumeBtn.addEventListener('click', resumeGame);
+
+function startGame() {
+  // Code to start the Tower of Hanoi game
+}
+
+function pauseGame() {
+  // Code to pause the game
+}
+
+function resumeGame() {
+  // Code to resume the game
+}
+</script>
+</body>
+</html>
